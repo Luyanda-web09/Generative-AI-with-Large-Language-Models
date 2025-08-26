@@ -109,3 +109,53 @@ Applications and Future Learning
 
 The overview emphasizes understanding different transformer models and their applications in real-world scenarios.
 The course will further explore prompt engineering, allowing interaction with transformer models through natural language.
+
+Various methods and configuration parameters that influence next-word generation in large language models (LLMs).
+
+Configuration Parameters
+
+These parameters are used during inference to control aspects like the maximum number of tokens generated and the creativity of the output.
+The "max new tokens" parameter limits the number of tokens the model generates, but it is not a strict cap.
+Decoding Methods
+
+Greedy decoding selects the word with the highest probability, which can lead to repetitive outputs.
+Random sampling introduces variability by selecting words based on their probability distribution, reducing repetition but potentially leading to less coherent outputs.
+Sampling Techniques
+
+Top k sampling restricts the model to the k most probable tokens, enhancing coherence while allowing some randomness.
+Top p sampling limits options based on cumulative probabilities, ensuring the model selects from a sensible range of words.
+Temperature Control
+
+The temperature parameter adjusts the randomness of the output: lower values lead to more predictable text, while higher values increase variability and creativity.
+A temperature of one uses the default probability distribution, balancing randomness and coherence.
+This foundational knowledge prepares you for developing and launching LLM-powered applications in future lessons.
+
+The generative AI project life cycle, specifically for developing and deploying applications powered by large language models (LLMs).
+
+Project Life Cycle Overview
+
+The life cycle includes stages from project conception to launch, emphasizing the importance of defining the project scope accurately.
+Understanding the specific tasks the LLM will perform is crucial, as it can save time and compute costs.
+Model Development Decisions
+
+Initial decisions involve whether to train a model from scratch or use an existing base model, with a general preference for starting with existing models.
+Performance assessment and potential additional training are necessary, including techniques like prompt engineering and fine-tuning.
+Deployment and Evaluation
+
+Ensuring the model behaves well and aligns with human preferences is vital, with techniques like reinforcement learning with human feedback introduced.
+Evaluation metrics and benchmarks will be explored to assess model performance, and the deployment stage includes optimizing the model for resource efficiency.
+
+The practical aspects of using the lab environment for hands-on learning in the context of generative AI.
+
+Lab Environment Overview
+
+The lab is conducted in Vocareum, which allows access to Amazon SageMaker for running notebooks at no cost.
+Students have 2 hours to complete each lab, and they can simply close the browser when finished.
+Getting Started with the Lab
+
+To begin, students need to click "Start Lab" and ensure the AWS status changes to green before proceeding.
+The quickest way to access SageMaker is by using the search function in the AWS console.
+Using Jupyter Notebooks
+
+Students will work in JupyterLab, where they can run code cells using Shift+Enter or run all cells at once.
+It is recommended to run the labs step by step for better understanding, following the provided instructions closely.
