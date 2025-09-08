@@ -253,3 +253,37 @@ The training process was further limited by early stopping, concluding after pro
 Domain-Specific Pre-training
 
 BloombergGPT exemplifies the process of pre-training a model for increased specificity in a particular domain, highlighting the trade-offs that can occur when optimal configurations are not achievable.
+
+Instruction tuning and fine-tuning of large language models (LLMs) to enhance their performance and adaptability.
+
+Instruction Tuning
+
+Instruction fine-tuning helps pretrained models learn to respond effectively to specific prompts and tasks.
+It is a significant advancement in LLMs, allowing them to follow instructions rather than just predict the next word based on general text.
+Fine-Tuning Techniques
+
+Two main types of fine-tuning are discussed: instruction fine-tuning and application-specific fine-tuning.
+Parameter Efficient Fine-Tuning (PEFT) methods help reduce the computational and memory costs associated with full fine-tuning.
+Challenges and Solutions
+
+Catastrophic forgetting can occur during fine-tuning, where the model loses previously learned information.
+Techniques like LoRA (Low-Rank Adaptation) are highlighted for their efficiency in achieving good performance with lower resource requirements.
+
+Fine-tuning large language models (LLMs) to enhance their performance for specific tasks.
+
+Fine-Tuning Overview
+
+Fine-tuning is a supervised learning process that updates the weights of a base model using a dataset of labeled examples.
+Instruction fine-tuning is a method that improves a model's performance across various tasks by training it with examples that demonstrate how to respond to specific instructions.
+Preparing Training Data
+
+To fine-tune a model, you need to prepare a dataset of prompt-completion pairs, where each prompt includes an instruction.
+Prompt template libraries can help convert existing datasets into instruction prompt datasets suitable for fine-tuning.
+Fine-Tuning Process
+
+The fine-tuning process involves dividing the dataset into training, validation, and test splits, and then comparing the model's output with the expected responses.
+The model's weights are updated through backpropagation based on the calculated loss, improving its performance on the task.
+Evaluation and Results
+
+After fine-tuning, you evaluate the model's performance using validation and test datasets to assess its accuracy.
+The outcome is a new version of the model, often referred to as an instruct model, which is better suited for the specific tasks of interest.
