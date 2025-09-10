@@ -351,3 +351,50 @@ It quantifies translation quality by comparing n-grams in the generated text to 
 Overall Evaluation
 
 While ROUGE and BLEU are useful for diagnostics, they should not be the sole metrics for final evaluations. Researchers have developed additional benchmarks for comprehensive model performance assessment.
+
+Evaluating large language models (LLMs) using established benchmarks and datasets.
+
+Evaluation Datasets
+
+Selecting the right evaluation dataset is crucial for accurately assessing an LLM's performance.
+Datasets should isolate specific model skills, such as reasoning or common sense knowledge, and assess potential risks like disinformation.
+Key Benchmarks
+
+GLUE (General Language Understanding Evaluation) and SuperGLUE are benchmarks that test various natural language tasks, encouraging models to generalize across multiple tasks.
+Newer benchmarks like MMLU (Massive Multitask Language Understanding) and BIG-bench assess models on a wider range of tasks, including mathematics and social bias.
+Holistic Evaluation Framework
+
+HELM (Holistic Evaluation of Language Models) aims to improve model transparency by measuring multiple metrics across various scenarios.
+It includes assessments beyond basic accuracy, focusing on fairness, bias, and toxicity, which are increasingly important as LLMs become more capable.
+
+Parameter efficient fine-tuning (PEFT) methods for training large language models (LLMs), which are crucial for managing memory and computational resources.
+
+Understanding Parameter Efficient Fine-Tuning (PEFT)
+
+Full fine-tuning of LLMs is resource-intensive, requiring significant memory for model weights and additional parameters.
+PEFT updates only a small subset of parameters, making memory requirements more manageable and allowing training on a single GPU.
+Types of PEFT Methods
+
+Selective methods fine-tune a subset of original LLM parameters, with mixed performance and trade-offs.
+Reparameterization methods create low-rank transformations of original weights, reducing the number of parameters to train.
+Additive methods introduce new trainable components while keeping original weights frozen, including adapter and soft prompt methods.
+Benefits of PEFT
+
+PEFT reduces the footprint of trained models, allowing for efficient adaptation to multiple tasks.
+It minimizes the risk of catastrophic forgetting and storage issues associated with full fine-tuning.
+
+Low-rank Adaptation (LoRA) is a parameter-efficient fine-tuning technique used in large language models (LLMs) that focuses on reducing the number of parameters trained during the fine-tuning process.
+
+Understanding LoRA
+
+LoRA freezes the original model parameters and injects low-rank decomposition matrices, allowing for efficient fine-tuning.
+The smaller matrices are designed to modify the original weights without changing their dimensions, enabling the model to adapt to specific tasks.
+Practical Application
+
+For example, using LoRA with a transformer architecture can reduce the number of trainable parameters significantly, allowing for fine-tuning on a single GPU.
+This method allows for the training of different sets of LoRA matrices for various tasks, which can be switched out during inference.
+Performance Comparison
+
+LoRA fine-tuning can achieve performance improvements similar to full fine-tuning while training significantly fewer parameters.
+The choice of rank for the LoRA matrices is crucial, with a range of 4-32 providing a good balance between parameter reduction and model performance.
+LoRA is a powerful method that not only enhances the efficiency of fine-tuning LLMs but also has implications for models in other domains.
